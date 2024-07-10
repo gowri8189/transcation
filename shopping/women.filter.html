@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainbox{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-start;
+        }
+         .card{
+            padding:1%;
+            margin:1%;
+        }
+        </style>
+</head>
+<body>
+    <from action="">
+        <input type="number" id="minvalue"/>
+        <input type="number" id="maxvalue"/>
+        <input type="button" value="filter" class="submit">
+     </from>
+     <div class="mainbox">
+        <div class="card parent"data-value="500">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/dress/n/j/9/m-473-sanwariya-creation-original-imaggzkrwd6zdu78.jpeg?q=90&crop=false" height="250px;"width="250px;"/>
+                <p>500</p>
+                    </div>
+    <div class="card parent"data-value="600">
+        <img src="https://m.media-amazon.com/images/I/91wJYjAgvoL._AC_UY1100_.jpg" height="250px;"width="250px;"/>
+            <p>600</p>
+                </div>
+    <div class="card parent"data-value="700">
+        <img src="https://fashiondream.co.in/cdn/shop/files/033-063A9654.jpg?v=1696422010&width=533" height="250px;"width="250px;"/>
+            <p>700</p>
+                </div>
+    <div class="card parent"data-value="800">
+        <img src="https://img.ltwebstatic.com/images3_pi/2023/02/28/167755512124ec4bf9c34e0862e9f741d0bec70721_thumbnail_720x.webp" height="250px;"width="250px;"/>
+            <p>800</p>
+                </div>
+    <div class="card parent"data-value="900">
+        <img src="https://cdn.shopify.com/s/files/1/0341/4805/7228/files/Types-of-bottom-wear.jpg?v=1693224132" height="250px;"width="250px;"/>
+            <p>900</p>
+                </div>
+    <div class="card parent"data-value="1000">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/PY/OH/CI/131441943/whatsapp-image-2021-06-24-at-14-19-15-500x500.jpeg" height="250x;"width="250px;"/>
+            <p>1000</p>
+                </div>
+    <div class="card parent"data-value="1100">
+        <img src="https://img.perniaspopupshop.com/catalog/product/s/e/SEEA092165_1.jpg" height="250px;"width="250px;"/>
+            <p>1100</p>
+                 </div>
+    <div class="card parent"data-value="1200">
+        <img src="https://www.thezaibai.com/cdn/shop/products/Aleezay-Eid-8_4fd408ca-d33a-4ad8-a70a-5cd572d65e41_2400x.jpg?v=1681423285" height="250px;"width="250px;"/>
+        <p>1200</p>
+            </div>
+    <div class="card parent"data-value="1300">
+        <img src="https://m.media-amazon.com/images/I/61ITSi9rhWL._AC_UY1000_.jpg" height="250px;"width="250px;"/>
+            <p>1300</p>
+                </div>
+    <div class="card parent"data-value="1400">
+        <img src="https://sepiastories.in/wp-content/uploads/2023/02/Paaduks-Bero-Sand-Beige-Women-Sandals-1.webp" height="250px;"width="250px;"/>
+            <p>1400</p>
+                 </div>
+    <div class="card parent"data-value="1500">
+        <img src="https://www.libertyshoesonline.com/pub/media/catalog/product/cache/3472fd40cc1db96a6b6b32a602408e32/o/c/ocean-w2_pink_1_1.jpg" height="250px;"width="250px;"/>
+            <p>1500</p>
+                </div>
+    <div class="card parent"data-value="1600">
+        <img src="https://sepiastories.in/wp-content/uploads/2023/09/Paaduks-Women-Corda-Dark-Blue-Sandals-1.webp" height="250px;"width="250px;"/>
+            <p>1600</p>
+                </div>
+    </div>
+    <script>
+     subBtn=document.querySelector('.submit');
+        let dataValue=document.querySelectorAll('.parent');
+        dataValue.forEach(function(Items){
+            subBtn.addEventListener('click',function(){
+                let min=document.getElementById("minvalue").value;
+                let max=document.getElementById("maxvalue").value;
+            minPI=parseInt(min);
+            maxPI=parseInt(max);
+            let dataItems=Items.getAttribute('data-value');
+            if(dataItems>=minPI && dataItems<=maxPI){
+                Items.style.display="block";
+            
+            }    
+            else{
+                Items.style.display="none";
+            }   
+          })
+        })
+    </script>
+    </body>
+    </html> 
+</body>
+</html>

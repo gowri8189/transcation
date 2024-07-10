@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .mainbox{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-start;
+        }
+         .card{
+            padding:1%;
+            margin:1%;
+        }
+</style>
+</head>
+<body>
+    <from action="">
+        <input type="number" id="minvalue"/>
+        <input type="number" id="maxvalue"/>
+        <input type="button" value="filter" class="submit">
+     </from>
+     <div class="mainbox">
+        <div class="card parent"data-value="500">
+            <img src="https://www.latestkurtidesigns.com/wp-content/uploads/2023/07/blue-dress.jpg" height="250px;"width="250px;"/>
+                <p>500</p>
+                    </div>
+    <div class="card parent"data-value="600">
+        <img src="https://www.suratsuit.in/product-img/thumb/Kid-s-Clothing-Set-Baba-Suit-B-1688391083.jpeg" height="250px;"width="250px;"/>
+            <p>600</p>
+                </div>
+    <div class="card parent"data-value="700">
+        <img src="https://static.wixstatic.com/media/4f249a_37c8c911d6fa402cb25af15e3a1a6baa~mv2.jpg/v1/fill/w_560,h_780,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4f249a_37c8c911d6fa402cb25af15e3a1a6baa~mv2.jpg" height="250px;"width="250px;"/>
+            <p>700</p>
+                </div>
+    <div class="card parent"data-value="800">
+        <img src="https://i.pinimg.com/736x/ff/46/d7/ff46d73e5c9fb9810c970f0a8ffb1713.jpg" height="250px;"width="250px;"/>
+            <p>800</p>
+                </div>
+    <div class="card parent"data-value="900">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2023/6/320519494/TN/AZ/AG/192039720/kids-wear-boys-500x500.jpg" height="250px;"width="250px;"/>
+            <p>900</p>
+                </div>
+    <div class="card parent"data-value="1000">
+        <img src="https://www.bangaloredesignerboutique.com/wp-content/uploads/2022/07/p7-2.jpg" height="250px;"width="250px;"/>
+            <p>1000</p>
+                </div>
+    <div class="card parent"data-value="1100">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/1/QD/VD/JA/20801279/img-20210922-085740.jpg" height="250px;"width="250px;"/>
+            <p>1100</p>
+                 </div>
+    <div class="card parent"data-value="1200">
+        <img src="https://i.pinimg.com/236x/21/89/6e/21896e0a5c4e5058af26a46af6ffc4b5.jpg" height="250px;"width="250px;"/>
+        <p>1200</p>
+            </div>
+    <div class="card parent"data-value="1300">
+        <img src="https://images.jdmagicbox.com/quickquotes/images_main/vkc-pride-kids-footwear-23-09-2020-242-210844804-rzzqx.png" height="250px;"width="250px;"/>
+            <p>1300</p>
+                </div>
+    <div class="card parent"data-value="1400">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/2/GV/EC/UL/112547497/kids-footwear.png" height="300px;"width="300px;"/>
+            <p>1400</p>
+                 </div>
+    <div class="card parent"data-value="1500">
+        <img src="https://images-cdn.ubuy.co.in/63d71ecd6527c461c902d525-shoes-sandals-crystal-girls-baby-bowknot.jpg" height="250px;"width="250px;"/>
+            <p>1500</p>
+                </div>
+    <div class="card parent"data-value="1600">
+        <img src="https://admin.mochishoes.com/product/46-23/660/46-23M14.jpg" height="250px;"width="250px;"/>
+            <p>1600</p>
+                </div>
+    </div>
+    <script>
+     subBtn=document.querySelector('.submit');
+        let dataValue=document.querySelectorAll('.parent');
+        dataValue.forEach(function(Items){
+            subBtn.addEventListener('click',function(){
+                let min=document.getElementById("minvalue").value;
+                let max=document.getElementById("maxvalue").value;
+            minPI=parseInt(min);
+            maxPI=parseInt(max);
+            let dataItems=Items.getAttribute('data-value');
+            if(dataItems>=minPI && dataItems<=maxPI){
+                Items.style.display="block";
+            
+            }    
+            else{
+                Items.style.display="none";
+            }   
+          })
+        })
+    </script>
+    </body>
+    </html>
+</body>
+</html>

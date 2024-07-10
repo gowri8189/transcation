@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.mainbox{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+}
+ .card{
+    padding:1%;
+    margin:1%;
+}
+</style>
+<body>
+ <from action="">
+    <input type="number" id="minvalue"/>
+    <input type="number" id="maxvalue"/>
+    <input type="button" value="filter" class="submit">
+ </from>
+ <div class="mainbox">
+    <div class="card parent"data-value="500">
+        <img src="https://www.beyoung.in/api/cache/catalog/products/new_shirt_upload_21_10_2022/royal_blue_denim_shirt_for_men_base_700x933.jpg" height="250px;"width="250px;"/>
+            <p>500</p>
+                </div>
+<div class="card parent"data-value="600">
+    <img src="https://rukminim2.flixcart.com/image/550/650/xif0q/shirt/j/w/1/xxl-cz-den-023-cazzba-original-imagx57ffhzeggcc.jpeg?q=90&crop=false" height="250px;"width="250px;"/>
+        <p>600</p>
+            </div>
+<div class="card parent"data-value="700">
+    <img src="https://imagescdn.planetfashion.in/img/app/product/7/785416-9136818.jpg?auto=format&w=494.40000000000003" height="250px;"width="250px;"/>
+        <p>700</p>
+            </div>
+<div class="card parent"data-value="800">
+    <img src="https://img.freepik.com/free-photo/basic-white-shirt-men-s-fashion-apparel-studio-shoot_53876-105424.jpg" height="250px;"width="250px;"/>
+        <p>800</p>
+            </div>
+<div class="card parent"data-value="900">
+    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/jean/x/f/r/32-sp1017-sparky-original-imagq4355zjum4h3.jpeg?q=90&crop=false" height="250px;"width="250px;"/>
+        <p>900</p>
+            </div>
+<div class="card parent"data-value="1000">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBWaoOmb06uXXwrYcQJwN5kw7X5Gd97RrHV8uFuXHGOwTS7ndG7PRezZnI3WmkdOovnw4&usqp=CAU" height="250px;"width="250px;"/>
+        <p>1000</p>
+            </div>
+<div class="card parent"data-value="1100">
+    <img src="https://content.jdmagicbox.com/rep/b2b/men-formal-trouser/men-formal-trouser-20.jpg?impolicy=queryparam&im=Resize=(360,360),aspect=fit" height="250px;"width="250px;"/>
+        <p>1100</p>
+             </div>
+<div class="card parent"data-value="1200">
+    <img src="https://5.imimg.com/data5/TF/IW/MY-17554435/men-casual-pant.jpg" height="250px;"width="250px;"/>
+    <p>1200</p>
+        </div>
+<div class="card parent"data-value="1300">
+    <img src="https://www.rajashoes.in/VendorAssets/1029/StoreImages/Large/1352SS-101BLACK.jpg" height="250px;"width="250px;"/>
+        <p>1300</p>
+            </div>
+<div class="card parent"data-value="1400">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-E_zNr_4EnWW4IDtNQxhl4S6YxrZy-ogXJA&usqp=CAU" height="250px;"width="250px;"/>
+        <p>1400</p>
+             </div>
+<div class="card parent"data-value="1500">
+    <img src="https://rukminim2.flixcart.com/image/850/1000/l4vnbm80/sandal/h/9/s/-original-imagfzhqzdyxrfh9.jpeg?q=90&crop=false" height="250px;"width="250px;"/>
+        <p>1500</p>
+            </div>
+<div class="card parent"data-value="1600">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROp0hLYOfQgZivj2n6HnD73Uxc0NvrsH8Qfg&usqp=CAU" height="250px;"width="250px;"/>
+        <p>1600</p>
+            </div>
+</div>
+<script>
+ subBtn=document.querySelector('.submit');
+    let dataValue=document.querySelectorAll('.parent');
+    dataValue.forEach(function(Items){
+        subBtn.addEventListener('click',function(){
+            let min=document.getElementById("minvalue").value;
+            let max=document.getElementById("maxvalue").value;
+        minPI=parseInt(min);
+        maxPI=parseInt(max);
+        let dataItems=Items.getAttribute('data-value');
+        if(dataItems>=minPI && dataItems<=maxPI){
+            Items.style.display="block";
+        
+        }    
+        else{
+            Items.style.display="none";
+        }   
+      })
+    })
+</script>
+</body>
+</html>

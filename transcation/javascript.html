@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <script>
+        function sub(){
+        const x=1234;
+        let pin=+prompt();
+        if(pin===1234){
+            window.location.href="accountdetails.html";
+        }
+        else {
+          alert("enter valid pin")
+        }
+        }
+        function debit(){
+        let pin=+prompt();
+        if(pin===1234){
+            window.location.href="DEBIT.html";
+        }
+        else {
+          alert("enter valid pin")
+        }
+        }
+        function credit(){
+        let pin=+prompt();
+        if(pin===1234){
+            window.location.href="CREDIT.html";
+        }
+        else {
+          alert("enter valid pin")
+        }
+        }
+     </script>
+      
+
+
+
+    <div class="container">
+       <h1><center> SHANKAR BANK DETAILS</center></h1>
+         <div class="row">
+           <div class="col-sm-4 mt-5">
+             <div class="card p-5">
+               <h3>A/c Details</h3> 
+                 <a href="accountdetails.html"><button class="btn btn-outline-info" onclick="sub()">click</button></a>
+                   </div>
+             </div>
+
+            <div class="col-sm-4 mt-5">
+             <div class="card p-5">
+               <h3>DEBIT</h3>
+               <a href="DEBIT.HTML"><button class="btn btn-outline-info" onclick="debit()">DEBIT</button></a>
+                  </div>
+              </div>
+
+            <div class="col-sm-4 mt-5">
+             <div class="card p-5">
+              <h3>CREDIT</h3>
+              <a href="CREDIT.HTML"><button class="btn btn-outline-info" onclick="credit()">CREDIT</button></a>
+                 </div>
+              </div>
+          </div>
+     </div>
+</body>
+</html>

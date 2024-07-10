@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <input type="number" id="balance"/>
+    <button onclick="credit()">CREDIT</button>
+    <a href="javascript.html"><button class="btn btn-outline-sucess">back to details</button></a>
+    <script>
+      const Amount=30000;
+      function credit(){
+       let x=document.getElementById("balance").value;
+       let xvalue=parseInt(x);
+       
+
+       if(Amount){
+          alert(Amount+xvalue);
+       }
+       else{
+        alert("add some amount")
+      }
+    }
+    </script>
+</body>
+</html>
